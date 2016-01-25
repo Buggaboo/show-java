@@ -22,7 +22,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.crashlytics.android.Crashlytics;
+//import com.crashlytics.android.Crashlytics;
 import com.njlabs.showjava.R;
 import com.njlabs.showjava.utils.Utils;
 import com.njlabs.showjava.utils.logging.Ln;
@@ -252,7 +252,7 @@ public class AppListing extends BaseActivity {
                 try {
                     FileUtils.deleteDirectory(sourceDir);
                 } catch (IOException e) {
-                    Crashlytics.logException(e);
+                    //Crashlytics.logException(e);
                 }
                 showDecompilerSelection(holder);
             }

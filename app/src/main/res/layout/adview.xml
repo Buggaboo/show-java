@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/adView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+/>
+<!--
 <com.google.android.gms.ads.AdView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:id="@+id/adView"
@@ -8,3 +16,4 @@
     android:layout_alignParentLeft="true"
     ads:adSize="SMART_BANNER"
     ads:adUnitId="ca-app-pub-5565459350927069/9153905152" />
+-->

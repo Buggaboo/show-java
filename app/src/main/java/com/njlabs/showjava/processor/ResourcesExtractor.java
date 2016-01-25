@@ -3,7 +3,7 @@ package com.njlabs.showjava.processor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-import com.crashlytics.android.Crashlytics;
+//import com.crashlytics.android.Crashlytics;
 import com.njlabs.showjava.utils.SourceInfo;
 
 import net.dongliu.apk.parser.ApkParser;
@@ -135,20 +135,20 @@ public class ResourcesExtractor extends ProcessServiceHelper {
             }
 
         } catch (IOException e) {
-            Crashlytics.logException(e);
+            //Crashlytics.logException(e);
         } finally {
             if (fileStream != null) {
                 try {
                     fileStream.close();
                 } catch (IOException e) {
-                    Crashlytics.logException(e);
+                    //Crashlytics.logException(e);
                 }
             }
             if (outputStream != null) {
                 try {
                     outputStream.close();
                 } catch (IOException e) {
-                    Crashlytics.logException(e);
+                    //Crashlytics.logException(e);
                 }
             }
         }
@@ -164,7 +164,7 @@ public class ResourcesExtractor extends ProcessServiceHelper {
             }
             FileUtils.writeStringToFile(new File(fileFolderPath + FilenameUtils.getName(path)), xml);
         } catch (IOException e) {
-            Crashlytics.logException(e);
+            //Crashlytics.logException(e);
         }
     }
 
@@ -191,18 +191,18 @@ public class ResourcesExtractor extends ProcessServiceHelper {
                 out = new FileOutputStream(sourceOutputDir + "/icon.png");
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
             } catch (Exception e) {
-                Crashlytics.logException(e);
+                //Crashlytics.logException(e);
             } finally {
                 try {
                     if (out != null) {
                         out.close();
                     }
                 } catch (IOException e) {
-                    Crashlytics.logException(e);
+                    //Crashlytics.logException(e);
                 }
             }
         } catch (IOException e) {
-            Crashlytics.logException(e);
+            //Crashlytics.logException(e);
         }
     }
 }

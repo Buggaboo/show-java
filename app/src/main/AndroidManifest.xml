@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="com.android.vending.BILLING" />
+    <!--<uses-permission android:name="com.android.vending.BILLING" />-->
 
     <application
         android:name="com.njlabs.showjava.MainApplication"
@@ -25,12 +25,12 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
+<!--
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />
-
+-->
         <activity
             android:name=".ui.Landing"
             android:label="@string/title_activity_landing">
@@ -96,10 +96,11 @@
         <activity
             android:name=".ui.ErrorActivity"
             android:label="@string/title_activity_error"/>
-
+<!--
         <activity
             android:name=".ui.PurchaseActivity"
             android:label="@string/title_activity_purchase"/>
+-->
 
 
     </application>

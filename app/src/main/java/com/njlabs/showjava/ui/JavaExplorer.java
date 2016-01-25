@@ -15,7 +15,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.crashlytics.android.Crashlytics;
+//import com.crashlytics.android.Crashlytics;
 import com.njlabs.showjava.R;
 import com.njlabs.showjava.modals.Item;
 import com.njlabs.showjava.utils.FileArrayAdapter;
@@ -234,7 +234,7 @@ public class JavaExplorer extends BaseActivity {
                         FileUtils.deleteDirectory(sourceDir);
                     }
                 } catch (IOException e) {
-                    Crashlytics.logException(e);
+                    //Crashlytics.logException(e);
                 }
                 Toast.makeText(baseContext, "The source code has been deleted from sdcard", Toast.LENGTH_SHORT).show();
                 finish();

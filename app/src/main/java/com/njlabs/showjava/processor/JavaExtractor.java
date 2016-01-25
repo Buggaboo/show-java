@@ -1,6 +1,6 @@
 package com.njlabs.showjava.processor;
 
-import com.crashlytics.android.Crashlytics;
+//import com.crashlytics.android.Crashlytics;
 import com.njlabs.showjava.utils.SourceInfo;
 import com.njlabs.showjava.utils.ZipUtils;
 import com.njlabs.showjava.utils.logging.Ln;
@@ -115,7 +115,7 @@ public class JavaExtractor extends ProcessServiceHelper {
             }
 
         } catch (Exception e) {
-            Crashlytics.logException(e);
+            ////Crashlytics.logException(e);
             broadcastStatus("exit_process_on_error");
         }
 

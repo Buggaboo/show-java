@@ -2,7 +2,7 @@ package com.njlabs.showjava.processor;
 
 import android.util.Log;
 
-import com.crashlytics.android.Crashlytics;
+//import com.crashlytics.android.Crashlytics;
 import com.googlecode.dex2jar.Method;
 import com.googlecode.dex2jar.ir.IrMethod;
 import com.googlecode.dex2jar.reader.DexFileReader;
@@ -168,13 +168,13 @@ public class JarExtractor extends ProcessServiceHelper {
                 mLine = reader.readLine();
             }
         } catch (IOException e) {
-            Crashlytics.logException(e);
+            ////Crashlytics.logException(e);
         } finally {
             if (reader != null) {
                 try {
                     reader.close();
                 } catch (IOException e) {
-                    Crashlytics.logException(e);
+                    ////Crashlytics.logException(e);
                 }
             }
         }

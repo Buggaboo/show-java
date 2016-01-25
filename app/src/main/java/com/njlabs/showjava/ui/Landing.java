@@ -31,7 +31,7 @@ import android.widget.Toast;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
-import com.crashlytics.android.Crashlytics;
+////import com.crashlytics.android.Crashlytics;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -66,11 +66,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
-import xyz.codezero.apl.SV;
+//import xyz.codezero.apl.SV;
 
 
 @SuppressWarnings("unused")
-public class Landing extends BaseActivity  implements BillingProcessor.IBillingHandler{
+public class Landing extends BaseActivity /* implements BillingProcessor.IBillingHandler */{
 
     private static final int FILE_PICKER = 0;
 
@@ -155,7 +155,8 @@ public class Landing extends BaseActivity  implements BillingProcessor.IBillingH
                                 startActivity(new Intent(baseContext, SettingsActivity.class));
                                 break;
                             case 6:
-                                startActivity(new Intent(baseContext, PurchaseActivity.class));
+/*
+                                startActivity(new Intent(baseContext, PurchaseActivity.class));*/
                                 break;
                         }
                         return false;
@@ -174,7 +175,7 @@ public class Landing extends BaseActivity  implements BillingProcessor.IBillingH
             initHistoryLoader();
         }
 
-
+/*
         try {
 
             AesCbcWithIntegrity.SecretKeys keys = new AesCbcWithIntegrity.SecretKeys(getResources().getString(R.string.cc),getResources().getString(R.string.ii));
@@ -182,8 +183,9 @@ public class Landing extends BaseActivity  implements BillingProcessor.IBillingH
             bp = new BillingProcessor(this, plainText, this);
 
         } catch (GeneralSecurityException | UnsupportedEncodingException e) {
-            Crashlytics.logException(e);
+            //Crashlytics.logException(e);
         }
+*/
     }
 
     public void initHistoryLoader(){
@@ -455,25 +457,28 @@ public class Landing extends BaseActivity  implements BillingProcessor.IBillingH
         }
     }
 
-    @Override
+//    @Override
     public void onBillingInitialized() {
+/*
         if(!isPro()) {
             bp.loadOwnedPurchasesFromGoogle();
         }
+*/
     }
 
-    @Override
+//    @Override
     public void onProductPurchased(String productId, TransactionDetails transactionDetails) {
 
     }
 
-    @Override
+//    @Override
     public void onBillingError(int i, Throwable throwable) {
         Ln.e(throwable);
     }
 
-    @Override
+//    @Override
     public void onPurchaseHistoryRestored() {
+/*
         try {
             final TransactionDetails transactionDetails = bp.getPurchaseTransactionDetails(BuildConfig.IAP_PRODUCT_ID);
             if(transactionDetails.productId.equals(BuildConfig.IAP_PRODUCT_ID)) {
@@ -519,6 +524,7 @@ public class Landing extends BaseActivity  implements BillingProcessor.IBillingH
         } catch (Exception ignored) {
             put(false);
         }
+*/
     }
 
     @Override

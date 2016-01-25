@@ -18,9 +18,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+//import com.google.android.gms.ads.AdListener;
+//import com.google.android.gms.ads.AdRequest;
+//import com.google.android.gms.ads.AdView;
 import com.njlabs.showjava.R;
 import com.njlabs.showjava.utils.AesCbcWithIntegrity;
 
@@ -36,7 +36,7 @@ public class BaseActivity extends AppCompatActivity {
     public Context baseContext;
     public Toolbar toolbar;
     protected SharedPreferences prefs;
-    private AdView mAdView;
+    //private AdView mAdView;
     public boolean isPro = false;
     public boolean hawkLoaded;
     private String androidID;
@@ -175,6 +175,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     private void setupGoogleAds() {
+/*
         mAdView = (AdView) findViewById(R.id.adView);
         if (mAdView != null) {
             mAdView.setVisibility(View.GONE);
@@ -199,9 +200,11 @@ public class BaseActivity extends AppCompatActivity {
                 }
             }
         }
+*/
     }
 
     public void put(boolean val){
+/*
         try {
             AesCbcWithIntegrity.SecretKeys keys = new AesCbcWithIntegrity.SecretKeys(getResources().getString(R.string.cc),getResources().getString(R.string.ii));
             AesCbcWithIntegrity.CipherTextIvMac cipherTextIvMac;
@@ -211,13 +214,16 @@ public class BaseActivity extends AppCompatActivity {
         } catch (UnsupportedEncodingException | GeneralSecurityException e) {
             e.printStackTrace();
         }
+*/
     }
 
     public boolean get(){
         try {
+/*
             AesCbcWithIntegrity.SecretKeys keys = new AesCbcWithIntegrity.SecretKeys(getResources().getString(R.string.cc),getResources().getString(R.string.ii));
             String plainText = AesCbcWithIntegrity.decryptString(prefs.getString(androidID,""), keys);
-            return (plainText.equals("true"));
+*/
+            return true; // (plainText.equals("true"));
         } catch (Exception e) {
             return false;
         }
